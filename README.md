@@ -1,11 +1,69 @@
-# Garbage Job V2 For QB-Core
+# qb-garbagejob
+ This is an edited version of qb-garagejob to allow the player to use qb-target and qb-radialmenu.
+ 
+ Pretty straight forward. Player gets truck from targeting ped. Drive to dumpster and use target to get the bag. Then, use target to put the bag inside the truck.
+ 
+ If you have any questions, reach out to me on the QBCore Framework Discord
+ 
+ Name - Mackaelroni#9537
+ 
+ Discord - https://discord.gg/pKUZvJBxq4
+ 
+ This is my first, edited, release with QBCore. I hope you guys enjoy!
+ 
+# Dependecies
+ qb-target | https://github.com/BerkieBb/qb-target
+ 
+ qb-radialmenu | https://github.com/qbcore-framework/qb-radialmenu
+ 
+# Installation
 
-# Rework Update
-- Job now pays per bag delivered on a configured scale.
-- Job Randomises the amount of stops and what stops the user goes to
-- Job traks rewards on the server rather than client
-- Optional Cryptostick find per stop
-- Highly Configurable.
+Put this snippet inside Config.JobInteractions in qb-radialmenu/config.lua
+
+        ["garbage"] = {
+            {
+                id = 'returnTruck',
+                title = 'Return Truck',
+                icon = 'torii-gate',
+                type = 'client',
+                event = 'garbage:returnTruck',
+                shouldClose = true
+            },
+        }
+Put this snippet inside Config.Peds in qb-target/config.lua
+
+        ["GarbagePed"] = {
+        model = 's_m_y_garbage', 
+        coords = vector4(-349.96, -1569.92, 25.22, 296.46),
+        minusOne = true, 
+        freeze = true, 
+        invincible = true, 
+        blockevents = true,
+        target = { 
+            options = {
+                {
+                    type = "server",
+                    event = "garbage:server:getGarbageJob",
+                    icon = "fas fa-sign-in-alt",
+                    label = "Get Garbage Job",
+                },
+                {
+                    type = "client",
+                    event = "garbage:getTruck",
+                    icon = "fas fa-sign-in-alt",
+                    label = "Get Garbage Truck",
+                },
+                {
+                    type = "server",
+                    event = "garbagejob:server:PayShift",
+                    icon = "fas fa-sign-in-alt",
+                    label = "Collect Pay Check",
+                },
+            },
+            distance = 1.5,
+        },
+    },
+
 
 # License
 
