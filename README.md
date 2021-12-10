@@ -33,36 +33,36 @@ Put this snippet inside Config.JobInteractions in qb-radialmenu/config.lua
 Put this snippet inside Config.Peds in qb-target/config.lua
 
         ["GarbagePed"] = {
-        model = 's_m_y_garbage', 
-        coords = vector4(-349.96, -1569.92, 25.22, 296.46),
-        minusOne = true, 
-        freeze = true, 
-        invincible = true, 
-        blockevents = true,
-        target = { 
-            options = {
-                {
-                    type = "server",
-                    event = "garbage:server:getGarbageJob",
-                    icon = "fas fa-sign-in-alt",
-                    label = "Get Garbage Job",
-                },
-                {
-                    type = "client",
-                    event = "garbage:getTruck",
-                    icon = "fas fa-sign-in-alt",
-                    label = "Get Garbage Truck",
-                },
-                {
-                    type = "server",
-                    event = "garbagejob:server:PayShift",
-                    icon = "fas fa-sign-in-alt",
-                    label = "Collect Pay Check",
-                },
-            },
-            distance = 1.5,
-        },
-    },
+             model = 's_m_y_garbage', 
+             coords = vector4(-349.96, -1569.92, 25.22, 296.46),
+             minusOne = true, 
+             freeze = true, 
+             invincible = true, 
+             blockevents = true,
+             target = { 
+               options = {
+                  {
+                      type = "server",
+                      event = "garbage:server:getGarbageJob",
+                      icon = "fas fa-sign-in-alt",
+                      label = "Get Garbage Job",
+                  },
+                  {
+                      type = "client",
+                      event = "garbage:getTruck",
+                      icon = "fas fa-sign-in-alt",
+                      label = "Get Garbage Truck",
+                  },
+                  {
+                      type = "server",
+                      event = "garbagejob:server:PayShift",
+                      icon = "fas fa-sign-in-alt",
+                      label = "Collect Pay Check",
+                  },
+              },
+              distance = 1.5,
+          },
+      },
 
 
 # License
