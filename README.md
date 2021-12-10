@@ -16,6 +16,8 @@
  
  qb-radialmenu | https://github.com/qbcore-framework/qb-radialmenu
  
+ lj-fuel | https://github.com/loljoshie/lj-fuel
+ 
 # Installation
 
 Put this snippet inside Config.JobInteractions in qb-radialmenu/config.lua
